@@ -9,6 +9,8 @@ def main():
     with open('test.txt', 'r') as f:
         while True:
             line = f.readline()
+            if not line:
+                break
             m = re.search(r'패턴', line)
             if m:    
                 print(m.group(1))
